@@ -1,0 +1,31 @@
+app:
+  name: "汉北小龙虾本地智能体"
+  version: "v1.0.0-first-archive"
+  language: "zh-CN"
+
+model:
+  provider: "deepseek"
+  base_url: "https://api.deepseek.com"
+  api_key_env: "DEEPSEEK_API_KEY"
+  model_name: "deepseek-chat"
+  temperature: 0.7
+  max_tokens: 2000
+
+image:
+  provider: "placeholder"
+  api_key_env: "IMAGE_API_KEY"
+  default_style: "工业写实 / 科技感 / 产品海报"
+  output_path: "outputs/images"
+  review_required: true
+
+paths:
+  system_prompt: "agent/system_prompt.md"
+  logs: "logs"
+  outputs: "outputs"
+  knowledge_base: "knowledge"
+  customer_data: "data/customers"
+
+workflow:
+  default_task: "content"
+  save_outputs: true
+  save_logs: true
